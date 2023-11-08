@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:
+        url(https://www.pixelstalk.net/wp-content/uploads/2016/08/Food-Wallpapers-HD-For-Desktop.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    nav {
+      height: 70px;
+      background: rgb(243, 65, 33);
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px 0px black;
+    }
+
+    nav .logo {
+      color: #fff;
+      height: 70px;
+      width: 100px;
+      background-color: tomato;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-radius: 0 20px 20px 0px;
+      position: absolute;
+      transition: all .25s ease-out;
+    }
+
+    nav .logo:hover {
+      color: black;
+      left: 0;
+      width: 200px;
+    }
+
+    nav ul {
+      list-style: none;
+      position: absolute;
+      right: 10px;
+      height: 70px;
+      width: 700px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    nav ul li {
+      color: #fff;
+      font-weight: bold;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+      padding: 10px;
+      transition: all .05s ease-in-out;
+      border-radius: 10px;
+    }
+
+    nav ul li:hover {
+      background-color: #fff;
+      color: black;
+      box-shadow: 0 0 20px -8px;
+      cursor: pointer;
+    }
+
+    nav ul li:active {
+      transform: scale(.9);
+      margin: 0 5px;
+      box-shadow: 0 0 20px -12px;
+    }
+
+    #customer {}
+
+    #manager {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .5s ease-in-out;
+    }
+
+    .forms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(40px);
+      border-radius: 15px;
+      transition: all .5s ease-in-out;
+    }
+
+    #mcreateaccount1,
+    .mcreateaccount2 {
+      width: 300px;
+      transition: all .5s ease-in-out;
+    }
+
+    #mcreateaccount1 h1,
+    .mcreateaccount2 {
+      color: #fff;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+      margin: 30px;
+      background-color: #000;
+      padding: 5px;
+      border-radius: 15px;
+      transition: all .5s ease-in-out;
+    }
+
+    #mcreateaccount2 {
+      display: none;
+    }
+
+    #mcreateaccount1 input,
+    .mcreateaccount2 input {
+      height: 40px;
+      width: 280px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 10px;
+      padding-left: 20px;
+      margin: 10px;
+      transition: all .5s ease-in-out;
+    }
+
+    .forms label {
+      background-color: #fff;
+    }
+
+    .side-poster {
+      background:
+        url(https://i.pinimg.com/736x/44/02/87/440287aa4eac9a73838c37c5eb2a3a3e--hdr-photography-people-photography.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 500px;
+      width: 300px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <span class="logo"> OFH </span>
+
+    <ul>
+      <!-- <li id="home" onclick="location.href='index.html'">Home</li>
+          <li id="customer" onclick="location.href='CustomerAccount.html'">Customer</li>
+          <li id="staff" onclick="location.href='StaffAccount.html'">Staff</li>
+          <li id="Manager" onclick="location.href='Manager.html'">Manager</li>
+          <li id="contact" onclick="location.href='ContactUs.html'">Contact us</li>
+          <li id="about" onclick="location.href='About.html'">About</li> -->
+
+      <li id="home">Home</li>
+      <li id="customer">Customer</li>
+      <li id="staff">Staff</li>
+      <li id="Manager">Manager</li>
+      <li id="contact">Contact us</li>
+      <li id="about">About</li>
+    </ul>
+
+  </nav>
+
+  <div id="customer">
+
+    <!-- <form action="cutomerlogin">
+    
+          <input type="tel" id="phone" placeholder="Phone Number">
+          <input type="password" id="password" placeholder="Password">
+          <input type="submit" id="submit-btn">
+    
+        </form> -->
+  </div>
+
+  <div id="manager">
+    <div class="side-poster"></div>
+    <div class="forms">
+
+      <form action="createaccount" id="mcreateaccount1">
+
+        <h1>Create Account</h1>
+        <div id="mca">
+          <input type="text" id="name" name="username" placeholder="Full Name" required> <input type="tel" id="phone"
+            placeholder="Phone Number" name="phone" required>
+          <input type="password" id="password" placeholder="Password" name="password" required> <input type="hidden"
+            name="role" value="Manager" required> <input type="button" id="submit-btn" value="Next">
+        </div>
+        <div id="mcreateaccount2">
+
+          <input type="text" id="branchname" name="branchname" placeholder="Branch Name" required> <input type="tel"
+            id="phone" placeholder="Branch Contact Number" name="bphone" required> <input type="text" id="landmark"
+            placeholder="Landmark" name="landmark" required> <input type="text" id="city" placeholder="City" name="city"
+            required>
+          <input type="text" id="state" placeholder="State" name="state" required> <input type="hidden" name="role"
+            value="Manager">
+
+
+          <input type="submit" id="submit-btn" value="Create">
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+
+    document.getElementById("submit-btn").addEventListener('click', () => {
+
+      // document.getElementById("mca").style.display = "none";
+      // document.getElementById("mcreateaccount2").style.display = "block";
+
+    });
+
+  </script>
+
+</body>
+
+</html>
